@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %}Manage Tasks{% endblock %} {% block
+content %}
+<h1>Manage Tasks</h1>
+<form method="POST" action="{{ url_for('main.manage_tasks') }}">
+  {{ form.hidden_tag() }}
+  <div>
+    {{ form.url.label }}<br />
+    {{ form.url(size=64) }}<br />
+  </div>
+  <div>
+    {{ form.data_type.label }}<br />
+    {{ form.data_type() }}<br />
+  </div>
+  <div>
+    {{ form.interval.label }}<br />
+    {{ form.interval() }}<br />
+  </div>
+  <div>{{ form.submit() }}</div>
+</form>
+<h2>Your Tasks</h2>
+<ul>
+  {% for task in tasks %}
+  <li>{{ task.url }} - {{ task.data_type }} - {{ task.interval }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

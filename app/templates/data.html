@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block title %}View Data{% endblock %} {% block
+content %}
+<h1>View Data</h1>
+<ul>
+  {% for result in results %}
+  <li>{{ result.data }} - {{ result.timestamp }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
