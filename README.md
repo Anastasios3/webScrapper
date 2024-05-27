@@ -25,7 +25,6 @@ A web scraper built with Flask and SQLAlchemy for scraping and storing web data.
 
 Create a virtual environment:
 
-sh
 
 python -m venv scraper_env
 scraper_env\Scripts\activate  # On Windows
@@ -33,13 +32,11 @@ source scraper_env/bin/activate  # On Unix/macOS
 
 Install dependencies:
 
-sh
 
 pip install -r requirements.txt
 
 Set up the database:
 
-sh
 
     flask shell
     >>> from app import db
@@ -49,8 +46,6 @@ sh
 Usage
 
     Run the app:
-
-    sh
 
     python run.py
 
