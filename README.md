@@ -1,5 +1,8 @@
 # Web Scraper Project
 
+## Disclaimer
+It needs more work.
+
 ## Overview
 
 A web scraper built with Flask and SQLAlchemy for scraping and storing web data.
